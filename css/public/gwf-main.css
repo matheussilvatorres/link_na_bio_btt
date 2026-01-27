@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* --- FAMÍLIA CORES --- */
 /* --- CORES --- */
 /* --- TAMANHO DE FONTE --- */
@@ -213,6 +214,10 @@
   content: "\f025";
 }
 
+.gwf-icon--video-camera:before {
+  content: "\f03d";
+}
+
 .gwf-icon--map-marker:before {
   content: "\f041";
 }
@@ -331,23 +336,11 @@
 
 @font-face {
   font-family: "growify-icons";
-  src: url("../fonts/growify-icons/growify-icons.eot?587rd6");
-  src: url("../fonts/growify-icons/growify-icons.eot?587rd6#iefix") format("embedded-opentype"), url("../fonts/growify-icons/growify-icons.ttf?587rd6") format("truetype"), url("../fonts/growify-icons/growify-icons.woff?587rd6") format("woff"), url("../fonts/growify-icons/growify-icons.svg?587rd6#growify-icons") format("svg");
+  src: url("../fonts/growify-icons/growify-icons.eot?afvykr");
+  src: url("../fonts/growify-icons/growify-icons.eot?afvykr#iefix") format("embedded-opentype"), url("../fonts/growify-icons/growify-icons.ttf?afvykr") format("truetype"), url("../fonts/growify-icons/growify-icons.woff?afvykr") format("woff"), url("../fonts/growify-icons/growify-icons.svg?afvykr#growify-icons") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
-}
-@font-face {
-  font-family: "Nexa";
-  src: url("../../css/fonts/nexa/Nexa-ExtraLight.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Nexa";
-  src: url("../../css/fonts/nexa/Nexa-Heavy.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
 }
 .fake-loader {
   position: relative;
@@ -391,22 +384,15 @@
   margin: 0px;
 }
 
-.gwf-bio {
-  font-family: "Nexa";
+.gwf-bio__wrapper {
+  font-family: "Poppins";
   display: flex;
   justify-content: center;
   padding: 20px;
-  background-image: url(https://blacknovember30off.fit4go.com.br/wp-content/uploads/2025/11/BACKGROUND_LINKS_KC_1905_x_2024_px.jpg);
+  background-color: #B5BD00;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-}
-@media (max-width: 767px) {
-  .gwf-bio {
-    padding: 15px;
-    background-image: url(https://blacknovember30off.fit4go.com.br/wp-content/uploads/2025/11/BACKGROUND_LINKS_KC_5.png);
-    background-attachment: fixed;
-  }
 }
 .gwf-bio__holder {
   width: 800px;
@@ -421,10 +407,6 @@
   flex-direction: column;
   gap: 24px;
   padding: 25px 20px;
-}
-.gwf-bio__card {
-  text-align: center;
-  color: #ffffff;
 }
 .gwf-bio__profile {
   display: flex;
@@ -474,7 +456,7 @@
   text-decoration: none;
 }
 .gwf-bio__social-icon {
-  color: #ffffff;
+  color: #757575;
   font-size: 24px;
   opacity: 0.8;
   transition: 0.3s;
@@ -482,6 +464,10 @@
 .gwf-bio__social-icon:hover {
   opacity: 1;
   transform: scale(1.1);
+}
+.gwf-bio__card {
+  text-align: center;
+  color: #ffffff;
 }
 .gwf-bio__links {
   display: flex;
@@ -499,13 +485,13 @@
   font-weight: 400;
   color: #ffffff;
   width: 60%;
-  background: #C96C2D;
+  background: #51534A;
   margin-bottom: 10px;
   border-radius: 5px;
-  min-height: 25px;
+  height: 25px;
 }
 .gwf-bio__links-item:hover {
-  background: #e47a34;
+  background-color: rgb(67.8439490446, 69.5191082803, 61.9808917197);
 }
 @media (max-width: 767px) {
   .gwf-bio__links-item {
@@ -514,28 +500,16 @@
     padding-left: 25px;
   }
 }
-.gwf-bio__links-text-wrapper {
+.gwf-bio__links-text {
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
+  line-height: 10px;
   text-align: center;
-}
-.gwf-bio__links-text {
-  text-align: center;
-}
-.gwf-bio__links-main {
-  font-size: 16px;
-  font-weight: 400;
-}
-.gwf-bio__links-sub {
-  font-family: "Nexa";
-  font-size: 12px;
-  font-weight: 400;
-  opacity: 0.8;
+  gap: 10px;
 }
 @media (max-width: 767px) {
-  .gwf-bio__links-sub {
-    font-size: 10px;
+  .gwf-bio__links-text {
+    font-size: 15px;
   }
 }
 .gwf-bio__links-icon {
@@ -550,6 +524,9 @@
     left: 9px;
   }
 }
+.gwf-bio__links-item-produtos {
+  text-decoration: none;
+}
 .gwf-bio__creator-content {
   display: flex;
   flex-direction: column;
@@ -563,10 +540,11 @@
   border-radius: 10px;
   border: 3px solid #DEDEDE;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  margin: 10px 0 15px 0;
+  margin-bottom: 15px;
+  margin: 10px;
 }
 .gwf-bio__produtos {
-  background-color: #C8B29E;
+  background-color: #51534A;
   border-radius: 15px;
   padding: 10px;
   margin: 0 auto;
@@ -605,16 +583,6 @@
   display: flex;
   transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-.gwf-bio__carrossel-link-text {
-  display: inline-block;
-  cursor: pointer;
-  line-height: 1;
-  text-decoration: none;
-  text-shadow: none;
-}
-.gwf-bio__carrossel-link-text:hover {
-  text-decoration: none;
-}
 .gwf-bio__carrossel-slide {
   min-width: 100%;
   border-radius: 12px;
@@ -624,9 +592,14 @@
 }
 .gwf-bio__carrossel-image {
   height: 290px;
-  width: 100%;
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 12px;
+}
+@media (max-width: 767px) {
+  .gwf-bio__carrossel-image {
+    width: 100%;
+    object-fit: contain;
+  }
 }
 .gwf-bio__carrossel-info {
   padding: 5px 5px;
@@ -647,11 +620,11 @@
   font-size: 18px;
   color: #ffffff;
   padding-bottom: 5px;
-  font-weight: 400;
+  font-weight: 400px;
 }
 .gwf-bio__carrossel-controls {
   position: absolute;
-  top: 26%;
+  top: 27%;
   width: 99%;
   display: flex;
   justify-content: space-between;
@@ -673,7 +646,7 @@
   box-shadow: none;
   text-shadow: none;
   background-color: #ffffff;
-  color: #C8B29E;
+  color: #535700;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -691,28 +664,39 @@
   flex-direction: column;
   align-items: center;
 }
-.gwf-bio__loja-button {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #C96C2D;
-  border: 2px solid #C96C2D;
-  border-radius: 8px;
-  width: 100%;
-  padding: 15px 0;
-  font-size: 18px;
-  font-weight: 400;
-  font-family: "Nexa";
-  cursor: pointer;
-}
-.gwf-bio__loja-button:hover {
-  background: #e47a34;
+.gwf-bio__loja:hover {
+  background-color: rgb(67.8439490446, 69.5191082803, 61.9808917197);
+  border: 2px solid #51534A;
 }
 @media (max-width: 767px) {
-  .gwf-bio__loja-button {
+  .gwf-bio__loja {
+    width: 100%;
     font-size: 16px;
   }
+}
+.gwf-bio__loja .gwf-icon {
+  font-size: 20px;
+  padding-left: 5px;
+}
+@media (max-width: 767px) {
+  .gwf-bio__loja .gwf-icon {
+    padding-left: 15px;
+  }
+}
+.gwf-bio__loja-button {
+  color: #ffffff;
+  background-color: #1c1d1a;
+  border: 2px solid #1c1d1a;
+  border-radius: 8px;
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Poppins";
+}
+.gwf-bio__loja-link {
+  text-decoration: none;
+  color: #ffffff;
 }
 .gwf-bio__site {
   display: flex;
@@ -720,9 +704,24 @@
   align-items: center;
   gap: 10px;
 }
+.gwf-bio__site .gwf-icon {
+  font-size: 20px;
+  padding-left: 5px;
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  .gwf-bio__site .gwf-icon {
+    padding-left: 15px;
+  }
+}
 .gwf-bio__site-title {
   color: #ffffff;
   font-size: 24px;
+}
+@media (max-width: 767px) {
+  .gwf-bio__site-title {
+    text-shadow: 2px 2px 4px black;
+  }
 }
 .gwf-bio__site-botao {
   background: transparent;
@@ -732,16 +731,14 @@
   outline: none;
   box-shadow: none;
   text-shadow: none;
-  background-color: #95765d;
+  background-color: #000;
   padding: 15px;
   width: 40%;
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .gwf-bio__site-botao:hover {
-  background-color: rgb(133.2995867769, 105.5661157025, 83.2004132231);
+  opacity: 1;
+  background-color: black;
 }
 @media (max-width: 767px) {
   .gwf-bio__site-botao {
@@ -759,16 +756,6 @@
 }
 .gwf-bio__site-link:hover {
   text-decoration: none;
-}
-.gwf-bio__site-icon {
-  font-size: 20px;
-  padding-left: 5px;
-  color: #ffffff;
-}
-@media (max-width: 767px) {
-  .gwf-bio__site-icon {
-    padding-left: 15px;
-  }
 }
 .gwf-bio__video-container {
   width: 100%;

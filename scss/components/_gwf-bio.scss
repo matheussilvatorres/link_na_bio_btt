@@ -2,414 +2,411 @@
 @forward '../base';
 
 * {
-    padding: 0px;
-    margin: 0px;
+	padding: 0px;
+	margin: 0px;
 }
 
 .gwf-bio {
-    font-family: "Nexa";
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    background-image: url(https://blacknovember30off.fit4go.com.br/wp-content/uploads/2025/11/BACKGROUND_LINKS_KC_1905_x_2024_px.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+	&__wrapper {
+		font-family: "Poppins";
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+		background-color: config.$secondary-color;
+		// background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://agenciagrowify.com.br/wp-content/uploads/2025/12/background-surpresa-fantastica.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
 
-    @include config.breakpoint('medium-down') {
-        padding: 15px;
-        background-image: url(https://blacknovember30off.fit4go.com.br/wp-content/uploads/2025/11/BACKGROUND_LINKS_KC_5.png);
-        background-attachment: fixed;
-    }
+	&__holder {
+		width: 800px;
 
-
-    &__holder {
-        width: 800px;
-        @include config.breakpoint('medium-down') { 
-			width: 100vw; 
+		@include config.breakpoint('medium-down') {
+			width: 100vw;
 		}
-    }
+	}
 
-    &__grid {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        padding: 25px 20px;
-    }
+	&__grid {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		padding: 25px 20px;
+	}
 
-    &__card {
-        text-align: center;
-        color: config.$neutral-color-lightest;
-    }
+	&__profile {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: config.$neutral-color-lightest;
+	}
 
+	&__profile-image {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 4px solid config.$neutral-color-light;
+		box-shadow: config.$default-shadow;
+	}
 
-    &__profile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: config.$neutral-color-lightest;
-    }
+	&__profile-title {
+		font-size: 28px;
+		font-weight: 700;
+		padding-top: 10px;
 
-    &__profile-image {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid config.$neutral-color-light;
-        box-shadow: config.$default-shadow;
-    }
-
-    &__profile-title {
-        font-size: 28px;
-        font-weight: 700;
-        padding-top: 10px;
-        @include config.breakpoint('medium-down') { 
-			font-size: 30px; 
+		@include config.breakpoint('medium-down') {
+			font-size: 30px;
 		}
-    }
+	}
 
-    &__profile-description {
-        font-size: 16px;
-        padding-bottom: 5px;
-    }
+	&__profile-description {
+		font-size: 16px;
+		padding-bottom: 5px;
 
-    &__profile-description-destaque {
-        font-weight: bold;
-    }
-
-
-    &__social {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        padding-top: 20px;
-    }
-
-    &__social-link {
-        @include config.reset-link;
-    }
-
-    &__social-icon {
-        color: config.$neutral-color-lightest;
-        font-size: 24px;
-        opacity: 0.8;
-        transition: 0.3s;
-
-        &:hover {
-            opacity: 1;
-            transform: scale(1.1);
-        }
-    }
-
-
-    &__links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &__links-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        padding: 12px 15px;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: 400;
-        color: config.$neutral-color-lightest;
-        width: 60%;
-        background: config.$tertiary-color;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        min-height: 25px;
-
-        &:hover {
-            background: config.$custom_1-color-dark;
-        }
-
-        @include config.breakpoint('medium-down') {
-            width: 90%;
-            font-size: 17px;
-            padding-left: 25px;
-        }
-    }
-
-    &__links-text-wrapper {
-        display: flex;
-        flex-direction: column;
-        line-height: 1.2;
-        text-align: center;
-    }
-    
-    &__links-text {
-        text-align: center;
-    }
-
-    &__links-main {
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    &__links-sub {
-        font-family: "Nexa";
-        font-size: 12px;
-        font-weight: 400;
-        opacity: 0.8;
-        @include config.breakpoint('medium-down') { 
-			font-size: 10px; 
+		&-destaque {
+			font-weight: bold;
 		}
-    }
+	}
 
-    &__links-icon {
-        position: absolute;
-        left: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 30px;
-        @include config.breakpoint('medium-down') { 
-			left: 9px; 
-		}
-    }
+	&__social {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		padding-top: 20px;
+	}
 
-
-    &__creator-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0px 20px;
-    }
-
-    &__creator-image {
-        width: 290px;
-        height: 350px;
-        object-fit: cover;
-        border-radius: 10px;
-        border: 3px solid config.$neutral-color-light;
-        box-shadow: config.$default-shadow;
-        margin: 10px 0 15px 0;
-    }
-
-
-    &__produtos {
-        background-color: config.$custom_2-color;
-        border-radius: 15px;
-        padding: 10px;
-        margin: 0 auto;
-        max-width: 290px;
-        
-        @include config.breakpoint('large-up') {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-    &__produtos-title {
-        font-size: 24px;
-        font-weight: 400;
-        color: config.$neutral-color-lightest;
-        text-align: center;
-        padding: 10px 0px;
-        @include config.breakpoint('medium-down') { 
-			font-size: 19px; 
-		}
-    }
-
-    &__carrossel {
-        position: relative;
-        overflow: hidden;
-        border-radius: 12px;
-        @include config.breakpoint('large-up') { 
-			width: 275px; 
-		}
-    }
-
-    &__carrossel-track {
-        display: flex;
-        transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-    }
-
-	&__carrossel-link-text {
+	&__social-link {
 		@include config.reset-link;
 	}
 
-    &__carrossel-slide {
-        min-width: 100%;
-        border-radius: 12px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
+	&__social-icon {
+		color: config.$tertiary-color;
+		font-size: 24px;
+		opacity: 0.8;
+		transition: 0.3s;
 
-    &__carrossel-image {
-        height: 290px;
-        width: 100%; 
-        object-fit: contain;
-        border-radius: 20px;
-    }
-
-    &__carrossel-info {
-        padding: 5px 5px;
-    }
-
-    &__carrossel-details {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &__carrossel-product-name {
-        font-size: 18px;
-        color: config.$neutral-color-lightest;
-        font-weight: 700;
-        padding: 5px 0px;
-        text-align: center;
-    }
-
-    &__carrossel-product-price {
-        font-size: 18px;
-        color: config.$neutral-color-lightest;
-        padding-bottom: 5px;
-        font-weight: 400;
-    }
-
-    &__carrossel-controls {
-        position: absolute;
-        top: 26%;
-        width: 99%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 1.5px;
-        pointer-events: none;
-        @include config.breakpoint('medium-down') {
-            width: 97%;
-            padding: 0 4.5px;
-        }
-    }
-
-    &__carrossel-btn {
-        @include config.reset-button;
-        background-color: config.$neutral-color-lightest;
-        color: config.$custom_2-color;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        pointer-events: auto;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
-        &:hover {
-            background-color: config.$neutral-color-light;
-        }
-
-        &--prev {
-            
-        }
-        &--next {
-            
-        }
-    }
-
-
-    &__loja {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &__loja-button {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        color: config.$neutral-color-lightest;
-        background-color: config.$tertiary-color;
-        border: 2px solid config.$tertiary-color;
-        border-radius: 8px;
-        width: 100%;
-        padding: 15px 0;
-        font-size: 18px;
-        font-weight: 400;
-        font-family: "Nexa";
-        cursor: pointer;
-
-        &:hover {
-            background: config.$custom_1-color-dark;
-        }
-
-        @include config.breakpoint('medium-down') {
-            font-size: 16px;
-        }
-    }
-
-    &__site {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    &__site-title {
-        color: config.$neutral-color-lightest;
-        font-size: 24px;
-        // @include config.breakpoint('medium-down') {
-        //     text-shadow: 2px 2px 4px black;
-        // }
-    }
-
-    &__site-botao {
-        @include config.reset-button;
-        background-color: config.$custom_2-color-dark;
-        padding: 15px;
-        width: 40%;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        &:hover {
-            background-color: darken(config.$custom_2-color-dark, 5%);
-        }
-
-        @include config.breakpoint('medium-down') { 
-			width: 90%; 
+		&:hover {
+			opacity: 1;
+			transform: scale(1.1);
 		}
-    }
+	}
 
-    &__site-link {
-        @include config.reset-link;
-        color: config.$neutral-color-lightest;
-        font-size: 18px;
-    }
+	&__card {
+		text-align: center;
+		color: config.$neutral-color-lightest;
+	}
 
-    &__site-icon {
-        font-size: 20px;
-        padding-left: 5px;
-        color: config.$neutral-color-lightest;
-        @include config.breakpoint('medium-down') { 
-			padding-left: 15px; 
+	&__links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__links-item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		padding: 12px 15px;
+		text-decoration: none;
+		font-size: 18px;
+		font-weight: 400;
+		color: config.$neutral-color-lightest;
+		width: 60%;
+		background: config.$primary-color;
+		margin-bottom: 10px;
+		border-radius: 5px;
+		height: 25px;
+
+		&:hover {
+			background-color: darken(config.$primary-color, 5%);
 		}
-    }
 
-
-    &__video-container {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    &__video-frame {
-        width: 100%;
-        aspect-ratio: 16 / 6;
-        border-radius: 16px;
-        overflow: hidden;
-        border: none;
-        @include config.breakpoint('medium-down') { 
-			aspect-ratio: 16 / 9; 
+		@include config.breakpoint('medium-down') {
+			width: 90%;
+			font-size: 17px;
+			padding-left: 25px;
 		}
-    }
+
+	}
+
+	&__links-text {
+		display: flex;
+		flex-direction: column;
+		line-height: 10px;
+		text-align: center;
+		gap: 10px;
+
+		@include config.breakpoint('medium-down') {
+			font-size: 15px;
+		}
+	}
+
+	&__links-icon {
+		position: absolute;
+		left: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 30px;
+
+		@include config.breakpoint('medium-down') {
+			left: 9px;
+		}
+	}
+
+	&__links-item-produtos {
+		text-decoration: none;
+	}
+
+	&__creator-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0px 20px;
+	}
+
+	&__creator-image {
+		width: 290px;
+		height: 350px;
+		object-fit: cover;
+		border-radius: 10px;
+		border: 3px solid config.$neutral-color-light;
+		box-shadow: config.$default-shadow;
+		margin-bottom: 15px;
+		margin: 10px;
+	}
+
+	&__produtos {
+		background-color: config.$primary-color;
+		border-radius: 15px;
+		padding: 10px;
+		margin: 0 auto;
+		max-width: 290px;
+
+		@include config.breakpoint('large-up') {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__produtos-title {
+		font-size: 24px;
+		font-weight: 400;
+		color: config.$neutral-color-lightest;
+		text-align: center;
+		padding: 10px 0px;
+
+		@include config.breakpoint('medium-down') {
+			font-size: 19px;
+		}
+	}
+
+	&__carrossel {
+		position: relative;
+		overflow: hidden;
+		border-radius: 12px;
+
+		@include config.breakpoint('large-up') {
+			width: 275px;
+		}
+	}
+
+	&__carrossel-track {
+		display: flex;
+		transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+	}
+
+	&__carrossel-slide {
+		min-width: 100%;
+		border-radius: 12px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__carrossel-image {
+		height: 290px;
+		object-fit: contain;
+		border-radius: 12px;
+
+		@include config.breakpoint('medium-down') {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__carrossel-info {
+		padding: 5px 5px;
+	}
+
+	&__carrossel-details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__carrossel-product-name {
+		font-size: 18px;
+		color: config.$neutral-color-lightest;
+		font-weight: 700;
+		padding: 5px 0px;
+		text-align: center;
+	}
+
+	&__carrossel-product-price {
+		font-size: 18px;
+		color: config.$neutral-color-lightest;
+		padding-bottom: 5px;
+		font-weight: 400px;
+	}
+
+	&__carrossel-controls {
+		position: absolute;
+		top: 27%;
+		width: 99%;
+		display: flex;
+		justify-content: space-between;
+		padding: 0 1.5px;
+		pointer-events: none;
+
+		@include config.breakpoint('medium-down') {
+			width: 97%;
+			padding: 0 4.5px;
+		}
+	}
+
+	&__carrossel-btn {
+		@include config.reset-button;
+		background-color: config.$neutral-color-lightest;
+		color: config.$secondary-color-dark;
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		pointer-events: auto;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+		&:hover {
+			background-color: config.$neutral-color-light;
+		}
+	}
+
+	&__loja {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&:hover {
+			background-color: darken(config.$primary-color, 5%);
+			border: 2px solid config.$primary-color;
+		}
+
+		@include config.breakpoint('medium-down') {
+			width: 100%;
+			font-size: 16px;
+		}
+
+		.gwf-icon {
+			font-size: 20px;
+			padding-left: 5px;
+
+			@include config.breakpoint('medium-down') {
+				padding-left: 15px;
+			}
+		}
+	}
+
+
+	&__loja-button {
+		color: config.$neutral-color-lightest;
+		background-color: config.$primary-color-dark;
+		border: 2px solid config.$primary-color-dark;
+		border-radius: 8px;
+		width: 100%;
+		padding: 15px 20px;
+		font-size: 18px;
+		font-weight: 400;
+		font-family: "Poppins";
+	}
+
+	&__loja-link {
+		text-decoration: none;
+		color: config.$neutral-color-lightest;
+	}
+
+	&__site {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+
+		.gwf-icon {
+			font-size: 20px;
+			padding-left: 5px;
+			color: config.$neutral-color-lightest;
+
+			@include config.breakpoint('medium-down') {
+				padding-left: 15px;
+			}
+
+		}
+	}
+
+	&__site-title {
+		color: config.$neutral-color-lightest;
+		font-size: 24px;
+
+		@include config.breakpoint('medium-down') {
+			text-shadow: 2px 2px 4px black;
+		}
+	}
+
+	&__site-botao {
+		@include config.reset-button;
+		background-color: config.$custom_2-color-dark;
+		padding: 15px;
+		width: 40%;
+		border-radius: 5px;
+
+		&:hover {
+			opacity: 1;
+			background-color: darken(config.$custom_2-color-dark, 5%);
+		}
+
+		@include config.breakpoint('medium-down') {
+			width: 90%;
+		}
+	}
+
+	&__site-link {
+		@include config.reset-link;
+		color: config.$neutral-color-lightest;
+		font-size: 18px;
+	}
+
+	&__video {}
+
+	&__video-container {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	&__video-frame {
+		width: 100%;
+		aspect-ratio: 16 / 6; //mantém proporção correta do YouT
+		border-radius: 16px; // cantos arredondados iguais ao site
+		overflow: hidden;
+		border: none;
+
+		@include config.breakpoint('medium-down') {
+			aspect-ratio: 16 / 9;
+		}
+	}
 
 	&__map {
 		display: flex;
