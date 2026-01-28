@@ -12,11 +12,17 @@
 		display: flex;
 		justify-content: center;
 		padding: 20px;
-		background-color: config.$secondary-color;
-		// background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://agenciagrowify.com.br/wp-content/uploads/2025/12/background-surpresa-fantastica.png);
+		// background-color: config.$secondary-color;
+		background-image: url(https://blacknovember30off.fit4go.com.br/wp-content/uploads/2026/01/BACKGROUND_BETTER_1905_x_2024_px_2.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
+
+		@include config.breakpoint('medium-down') {
+			padding: 15px;
+			background-image: url(https://blacknovember30off.fit4go.com.br/wp-content/uploads/2026/01/BACKGROUND_BETTER.png);
+			background-attachment: fixed;
+		}
 	}
 
 	&__holder {
@@ -360,9 +366,9 @@
 		color: config.$neutral-color-lightest;
 		font-size: 24px;
 
-		@include config.breakpoint('medium-down') {
-			text-shadow: 2px 2px 4px black;
-		}
+		// @include config.breakpoint('medium-down') {
+		// 	text-shadow: 2px 2px 4px black;
+		// }
 	}
 
 	&__site-botao {
