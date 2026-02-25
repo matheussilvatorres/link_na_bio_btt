@@ -531,6 +531,21 @@
     left: 9px;
   }
 }
+.gwf-bio__links-icon-img {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  object-fit: contain;
+}
+@media (max-width: 767px) {
+  .gwf-bio__links-icon-img {
+    width: 25px;
+    left: 9px;
+  }
+}
 .gwf-bio__links-item-produtos {
   text-decoration: none;
 }

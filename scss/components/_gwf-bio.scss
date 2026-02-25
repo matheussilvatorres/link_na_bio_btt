@@ -161,6 +161,21 @@
 		}
 	}
 
+	&__links-icon-img {
+		width: 30px;
+        height: auto;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        object-fit: contain;
+
+        @include config.breakpoint('medium-down') {
+            width: 25px;
+            left: 9px;
+        }
+	}
+
 	&__links-item-produtos {
 		text-decoration: none;
 	}
